@@ -1,0 +1,134 @@
+[07-Sep-2017 14:06:27 PRC] An Error occurred while handling another error:
+exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'' in D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#3 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 D:\phpStudy\WWW\yii2\advanced\common\models\User.php(64): yii\db\BaseActiveRecord::findOne(Array)
+#6 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity('39')
+#7 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#8 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#9 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#10 D:\phpStudy\WWW\yii2\advanced\backend\views\layouts\main.php(40): yii\base\Component->__get('isGuest')
+#11 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\phpStudy\\WWW...')
+#12 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\phpStudy\\WWW...', Array)
+#13 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('D:\\phpStudy\\WWW...', Array, Object(backend\controllers\SiteController))
+#14 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorAction.php(126): yii\base\Controller->render('error', Array)
+#16 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorAction.php(105): yii\web\ErrorAction->renderHtmlResponse()
+#17 [internal function]: yii\web\ErrorAction->run()
+#18 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#19 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\Action->runWithParams(Array)
+#20 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('error', Array)
+#21 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#22 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#23 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#24 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'
+The SQL being executed was: SELECT * FROM `user` WHERE (`id`='39') AND (`status`=10)' in D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#3 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 D:\phpStudy\WWW\yii2\advanced\common\models\User.php(64): yii\db\BaseActiveRecord::findOne(Array)
+#6 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity('39')
+#7 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#8 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#9 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#10 D:\phpStudy\WWW\yii2\advanced\backend\views\layouts\main.php(40): yii\base\Component->__get('isGuest')
+#11 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\View.php(328): require('D:\\phpStudy\\WWW...')
+#12 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\phpStudy\\WWW...', Array)
+#13 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('D:\\phpStudy\\WWW...', Array, Object(backend\controllers\SiteController))
+#14 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#15 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorAction.php(126): yii\base\Controller->render('error', Array)
+#16 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorAction.php(105): yii\web\ErrorAction->renderHtmlResponse()
+#17 [internal function]: yii\web\ErrorAction->run()
+#18 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#19 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\Action->runWithParams(Array)
+#20 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('error', Array)
+#21 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\ErrorHandler.php(95): yii\base\Module->runAction('site/error')
+#22 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#23 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#24 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'status' in 'where clause'
+)
+
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/register".' in D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('index/register', Array)
+#1 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Go\\bin;C:\\Program Files\\Git\\bin;C:\\Cocos\\tools\\ant\\bin;C:\\Cocos\\tools\\Android-SDK\\tools;C:\\Cocos\\tools\\android-ndk-r10e;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Anaconda3;C:\\Program Files\\Anaconda3\\Scripts;C:\\Program Files\\Anaconda3\\Library\\bin;C:\\Python27\\;D:\\phpStudy\\php\\php-5.6.27-nts;C:\\ProgramData\\ComposerSetup\\bin;Python27\\;C:\\Cocos\\Cocos2d-x\\cocos2d-x-3.10\\templates;C:\\Cocos\\Cocos2d-x;Cocos\\Cocos2d-x\\cocos2d-x-3.10\\tools\\cocos2d-console\\bin;cocos2d-x-3.10\\templates;C:\\Users\\Magi004\\AppData\\Local\\Microsoft\\WindowsApps;Program Files (x86)\\Microsoft VS Code\\bin;Users\\Magi004\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Magi004\\AppData\\Roaming\\Composer\\vendor\\bin',
+    'SYSTEMROOT' => 'C:\\Windows',
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+    'WINDIR' => 'C:\\Windows',
+    'PHP_FCGI_MAX_REQUESTS' => '1000',
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/',
+    '_FCGI_SHUTDOWN_EVENT_' => '2208',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/index.php?r=index%2Fregister',
+    'QUERY_STRING' => 'r=index%2Fregister',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REMOTE_PORT' => '56278',
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2/advanced/backend/web/index.php',
+    'SERVER_ADMIN' => 'admin@phpStudy.net',
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yii2/advanced/backend/web',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yii2/advanced/backend/web',
+    'REMOTE_ADDR' => '127.0.0.1',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '127.0.0.1',
+    'SERVER_NAME' => 'www.yii2_admin.com',
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'SystemRoot' => 'C:\\Windows',
+    'HTTP_COOKIE' => 'advanced-backend=b19adtj7k0530oeltc71vprpj5; _csrf-backend=67c8ca92460cf1223d92c4387132b82b7d043439390310893bd359f7cbdd1238a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Bz6hzDKfh2LPYmaQ_4fCvgVfPWoEhEZ2%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'www.yii2_admin.com',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1504764387.6023681,
+    'REQUEST_TIME' => 1504764387,
+]
+[07-Sep-2017 14:50:29 PRC] PHP Parse error:  syntax error, unexpected '}' in D:\phpStudy\WWW\yii2\advanced\backend\views\layouts\main.php on line 43
+[07-Sep-2017 14:50:29 PRC] PHP Stack trace:
+[07-Sep-2017 14:50:29 PRC] PHP   1. {main}() D:\phpStudy\WWW\yii2\advanced\backend\web\index.php:0
+[07-Sep-2017 14:50:29 PRC] PHP   2. yii\base\Application->run() D:\phpStudy\WWW\yii2\advanced\backend\web\index.php:17
+[07-Sep-2017 14:50:29 PRC] PHP   3. yii\web\Application->handleRequest() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Application.php:380
+[07-Sep-2017 14:50:29 PRC] PHP   4. yii\base\Module->runAction() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\web\Application.php:102
+[07-Sep-2017 14:50:29 PRC] PHP   5. yii\base\Controller->runAction() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Module.php:523
+[07-Sep-2017 14:50:29 PRC] PHP   6. yii\base\InlineAction->runWithParams() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php:156
+[07-Sep-2017 14:50:29 PRC] PHP   7. call_user_func_array:{D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\InlineAction.php:57}() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\InlineAction.php:57
+[07-Sep-2017 14:50:29 PRC] PHP   8. backend\controllers\IndexController->actionLogin() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\InlineAction.php:57
+[07-Sep-2017 14:50:29 PRC] PHP   9. yii\base\Controller->render() D:\phpStudy\WWW\yii2\advanced\backend\controllers\IndexController.php:38
+[07-Sep-2017 14:50:29 PRC] PHP  10. yii\base\Controller->renderContent() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php:382
+[07-Sep-2017 14:50:29 PRC] PHP  11. yii\base\View->renderFile() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\Controller.php:396
+[07-Sep-2017 14:50:29 PRC] PHP  12. yii\base\View->renderPhpFile() D:\phpStudy\WWW\yii2\advanced\vendor\yiisoft\yii2\base\View.php:250
